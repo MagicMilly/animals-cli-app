@@ -1,0 +1,4 @@
+class Animals::Ducks
+
+  
+end

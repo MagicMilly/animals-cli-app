@@ -1,9 +1,7 @@
 #CLI Controller for User Interaction
 
-Class Animals::CLI
+class Animals::CLI
 
-  def call
-    puts "These are the animals"
-  end
+
 
 end
