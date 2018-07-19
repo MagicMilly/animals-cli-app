@@ -12,3 +12,5 @@ require "animals"
 
 require "irb"
 IRB.start(__FILE__)
+
+puts "Hello World" 
