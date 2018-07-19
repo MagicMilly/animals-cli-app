@@ -1,5 +1,2 @@
-require "animals/version"
-
-module Animals
-  # Your code goes here...
-end
+require_relative "./animals/version"
+require_relative "./animals/cli"
