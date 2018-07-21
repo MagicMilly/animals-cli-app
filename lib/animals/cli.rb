@@ -1,6 +1,6 @@
 #CLI Controller for User Interaction
 
-class Animals::CLI
+class CLI
 
 
 
