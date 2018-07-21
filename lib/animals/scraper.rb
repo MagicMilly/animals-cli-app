@@ -7,8 +7,9 @@ class Scraper
     def self.scrape_animal_profiles
       ducks = []
       page = Nokogiri::HTML(open(BASE_URL))
-      duck_name = page.css("h4 strong")
+      duck_name = page.css("h4 strong").text
       binding.pry
+      puts "end"
     end
 
 end
