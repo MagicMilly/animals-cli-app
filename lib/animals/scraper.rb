@@ -1,6 +1,6 @@
 #This class will be responsible for scraping the website.
 
-class Scraper
+class Animals::Scraper
 
   BASE_URL = "http://leilanifarmsanctuary.com/meet-the-ducks/"
 

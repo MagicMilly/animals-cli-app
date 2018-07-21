@@ -1,4 +1,4 @@
-class Ducks 
+class Animals::Ducks 
 
 
 end
