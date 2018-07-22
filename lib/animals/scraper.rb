@@ -7,21 +7,12 @@ class Animals::Scraper
     def self.scrape_species
       species = []
       page = Nokogiri::HTML(open(BASE_URL))
-      # species_names = page.css("h4 span").map {|species_names| species_names.text.chomp("Sponsorship")}
-      # species_names.each do |name|
-      #   Animals::Species.new(name)
-      # end
-      # species_url = page.css("a").attribute("href").map {|urls| urls.value}
       page.css("div.et_pb_column.et_pb_column_1_2").each do |animal_page|
         name = animal_page.css("h4 span").text.chomp("Sponsorship")
         url = animal_page.css("a").attribute("href").value
         Animals::Species.new(name, url)
       end
     end
-
-    # def self.scrape_duck_bios
-    #   duck_descriptions = page.css("h4 p").map {|description| description.text}
-    # end
 
     def self.scrape_animal_details(category)
         animal = []

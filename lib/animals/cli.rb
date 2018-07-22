@@ -18,15 +18,6 @@ class Animals::CLI
     puts " "
     puts "Please select an animal's number to learn more"
   end
-
-  # def main_menu
-  #   puts "Here are the ducks living at Leilani Farm Sanctuary:"
-  #   ducks = Animals::Ducks.all
-  #   ducks.each.with_index(1) do |duck, index|
-  #     puts "#{index}. #{duck.name}"
-  #   end
-  #   puts " "
-  #   puts "Please select a duck's number to learn more about that duck!"
   #
   #   # User input code
   #   # input = gets.strip
