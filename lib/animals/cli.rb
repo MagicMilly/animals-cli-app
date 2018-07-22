@@ -17,11 +17,19 @@ class Animals::CLI
     end
     puts " "
     puts "Please select an animal's number to learn more"
+
+    # User input code
+    input = gets.strip
+    index = input.to_i - 1
+
+    animal = Animals::Species.all[index]
+
+    puts "You chose #{animal.name}!"
+    puts "Here are all the #{animal.name}s at Leilani Farm Sanctuary:"
+
   end
-  #
-  #   # User input code
-  #   # input = gets.strip
-  #   # index = input_to_i - 1
-  # end
+
+
+
 
 end
