@@ -2,4 +2,4 @@
 
 require_relative "../lib/animals"
 
-Animals::CLI.new.start 
+Animals::Scraper.new.method_missing  

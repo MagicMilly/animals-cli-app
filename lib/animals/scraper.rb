@@ -17,4 +17,10 @@ class Animals::Scraper
     #   duck_descriptions = page.css("h4 p").map {|description| description.text}
     # end
 
+    # def self.scrape_duck_bios
+    #   page = Nokogiri::HTML(open(BASE_URL))
+    #   duck_bios = page.css.et_overlay et_pb_inline_icon("p").map {|duck_bio| duck_bio.text}
+    # end
+
+
 end
