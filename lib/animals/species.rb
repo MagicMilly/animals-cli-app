@@ -1,6 +1,6 @@
-class Animals::Ducks
+class Animals::Species 
 
-  attr_accessor :name
+  attr_accessor :name, :bio, :url, :animal_names, :animal_bios
 
   @@all = []
 
@@ -12,5 +12,5 @@ class Animals::Ducks
   def self.all
     @@all
   end
-  
+
 end
