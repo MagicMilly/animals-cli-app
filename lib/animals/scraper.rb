@@ -8,7 +8,9 @@ class Animals::Scraper
       species = []
       page = Nokogiri::HTML(open(BASE_URL))
       species_names = page.css("h4 span").map {|species_names| species_names.text.chomp("Sponsorship")}
-      
+      species_names.each do |name|
+        Animals::Species.new(name)
+      end 
     end
 
     # def self.scrape_duck_bios
