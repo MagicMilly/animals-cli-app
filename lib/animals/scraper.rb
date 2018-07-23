@@ -17,17 +17,7 @@ class Animals::Scraper
     def self.scrape_animal_details(animal)
         url = animal.url
         page = Nokogiri::HTML(open(url))
-        animal.animal_names = page.css("h4 strong").map {|names| names.text} 
-        binding.pry
-        # category.animal_names = page.css("h4 strong").map {|animal_name| animal_name.text}
-        #animal_names.each do |name|
-        #  Animals::AnimalCategory.new(name)
-        #end
-        # category.animal_bios = page.css(".et_pb_column .et_pb_text p").map {|animal_bio| animal_bio.text}
-        #Animal::Ducks.all.each_with_index do |animal, index|
-        #  animal.description = animal_descriptions[index]
-        #end
-        #duck_bios = page.css(".et_pb_column .et_pb_text p").map {|duck_bio| duck_bio.text}
+        animal.animal_names = page.css("h4 strong").map {|names| names.text}
     end
 
 
