@@ -25,9 +25,13 @@ class Animals::CLI
     animal = Animals::Species.all[index]
 
     puts "You chose #{animal.name}!"
+    puts " "
     Animals::Scraper.scrape_animal_details(animal)
-    puts "Here are all the #{animal.name}s at Leilani Farm Sanctuary:"
-    puts animal.animal_names 
+    puts "Here are all the members of the #{animal.name} community at Leilani Farm Sanctuary:"
+    puts animal.animal_names
+    # animal.animal_names.each.with_index(1) do |name, index|
+    #   puts "#{index}. #{name.animal_names}"
+    # end
 
   end
 
