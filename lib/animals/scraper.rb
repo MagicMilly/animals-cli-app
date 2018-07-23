@@ -17,7 +17,8 @@ class Animals::Scraper
     def self.scrape_animal_details(animal)
         url = animal.url
         page = Nokogiri::HTML(open(url))
-        animal.animal_names = page.css("h4 strong").text 
+        animal.animal_names = page.css("h4 strong").map {|names| names.text} 
+        binding.pry
         # category.animal_names = page.css("h4 strong").map {|animal_name| animal_name.text}
         #animal_names.each do |name|
         #  Animals::AnimalCategory.new(name)
