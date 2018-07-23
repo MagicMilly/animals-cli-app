@@ -27,6 +27,8 @@ class Animals::CLI
     puts "You chose #{animal.name}!"
     puts "Here are all the #{animal.name}s at Leilani Farm Sanctuary:"
 
+    Animals::Scraper.scrape_animal_details(animal)
+
   end
 
 
