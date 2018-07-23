@@ -8,7 +8,7 @@ class Animals::Scraper
       species = []
       page = Nokogiri::HTML(open(BASE_URL))
       page.css("div.et_pb_column.et_pb_column_1_2").each do |animal_page|
-        name = animal_page.css("h4 span").text.chomp("Sponsorship").rstrip  
+        name = animal_page.css("h4 span").text.gsub(/(\s*Sponsorship)/, "")  
         url = animal_page.css("a").attribute("href").value
         Animals::Species.new(name, url)
       end
