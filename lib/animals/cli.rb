@@ -3,6 +3,7 @@
 class Animals::CLI
 
   def start
+    puts " "
     puts "Welcome!"
     Animals::Scraper.scrape_species
     puts " "
@@ -11,6 +12,7 @@ class Animals::CLI
 
   def list_animals
     puts "Here are the animals living at Leilani Farm Sanctuary:"
+    puts " "
     animals = Animals::Species.all
     animals.each.with_index(1) do |species, index|
       puts "#{index}. #{species.name}"
@@ -20,8 +22,10 @@ class Animals::CLI
 
   def main_menu
     input = nil
+    puts " "
     while input != "exit"
       puts "Please select an animal's number to learn more or type 'exit'."
+
       input = gets.strip
       index = input.to_i - 1
       animal = Animals::Species.all[index]
@@ -42,6 +46,6 @@ class Animals::CLI
           "Not sure what you meant. Please type 'main menu' or 'exit'."
         end
       end
-    end 
+    end
 
   end
