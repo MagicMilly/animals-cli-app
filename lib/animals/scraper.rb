@@ -5,7 +5,7 @@ class Animals::Scraper
   BASE_URL = "http://leilanifarmsanctuary.com/meet-the-animals/"
 
     def self.scrape_species
-      species = []
+      # species = []
       page = Nokogiri::HTML(open(BASE_URL))
       page.css("div.et_pb_column.et_pb_column_1_2").each do |animal_page|
         name = animal_page.css("h4 span").text.gsub(/(\s*Sponsorship)/, "")
@@ -15,16 +15,17 @@ class Animals::Scraper
     end
 
     def self.scrape_animal_details(animal)
+        animals = []
         url = animal.url
         page = Nokogiri::HTML(open(url))
-        animal.animal_names = page.css("h4 strong").map {|names| names.text}
-        animal.animal_bios = page.css("div.et_pb_text").css("h4 p").map {|bios| bios.text}
-        binding.pry
+        # animal.animal_names = page.css("h4 strong").map {|names| names.text}
+        # binding.pry
+        animal_info = page.css("div.et_pb_section.et_pb_section_parallax.et_pb_section_2.et_pb_with_background.et_section_regular").each do |info|
+          animals << {
+            :animal_names => info.css("h4 strong").text,
+            :animal_bios => info.css("p").text
+          }
+          binding.pry
+        end
     end
-
-
 end
-
-#.et_pb_section_2.et_pb_with_background.et_section_regular
-
-# <div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_3">
