@@ -17,15 +17,14 @@ class Animals::CLI
     animals.each.with_index(1) do |species, index|
       puts "#{index}. #{species.name}"
     end
+    puts " "
+    puts "Please select an animal's number to learn more."
     main_menu
   end
 
   def main_menu
     input = nil
-    puts " "
     while input != "exit"
-      puts "Please select an animal's number to learn more or type 'exit'."
-
       input = gets.strip
       index = input.to_i - 1
       animal = Animals::Species.all[index]
@@ -36,16 +35,22 @@ class Animals::CLI
 
       puts "Here are all the members of the #{animal.name} community at Leilani Farm Sanctuary:"
       # Animals::Scraper.scrape_animal_details(animal)
+      puts " "
       puts "Some animal names"
       puts " "
       puts "Type 'main menu' to go back or 'exit'."
 
-        if input == "main_menu"
-          list_animals
-        else
-          "Not sure what you meant. Please type 'main menu' or 'exit'."
-        end
+      if input.downcase == "main_menu"
+        list_animals
+      elsif
+        "Not sure what you meant. Please type 'main menu' or 'exit'."
+      else
+        goodbye 
       end
     end
-
   end
+
+  def goodbye
+    puts "Goodbye!"
+  end
+end
