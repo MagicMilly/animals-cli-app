@@ -23,8 +23,8 @@ class Animals::CLI
   end
 
   def main_menu
-    input = nil
-    while input != "exit"
+    # input = nil
+    # while input != "exit"
       input = gets.strip
       index = input.to_i - 1
       animal = Animals::Species.all[index]
@@ -38,13 +38,21 @@ class Animals::CLI
       Animals::Scraper.scrape_animal_details(animal)
       # puts "Some animal names"
       puts " "
-      puts "Type 'main menu' to go back or 'exit'."
+      # puts "Type 'main menu' to go back or 'exit'."
 
-      if input.downcase == "main_menu"
-        list_animals
-      else
-        "Not sure what you meant. Please type 'main menu' or 'exit'."
-      end
-    end
+      # if input.downcase == "main_menu"
+      #   list_animals
+      # else
+      #   "Not sure what you meant. Please type 'main menu' or 'exit'."
+      # end
+    # end
   end
+
+  # def add_atributes
+  #
+  # end
+
+  #display_with_attributes
+  #
+  #end
 end
