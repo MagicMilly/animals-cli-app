@@ -36,7 +36,7 @@ class Animals::CLI
       puts "Here are all the members of the #{animal.name} community at Leilani Farm Sanctuary:"
       puts " "
       Animals::Scraper.scrape_community_details(animal)
-      puts Animals::Community.all 
+      Animals::Community.all.each {|member| puts member.name}    
       puts " "
       # puts "Type 'main menu' to go back or 'exit'."
 
