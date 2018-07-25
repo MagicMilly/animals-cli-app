@@ -18,15 +18,14 @@ class Animals::Scraper
         animals = []
         url = animal.url
         page = Nokogiri::HTML(open(url))
-        # animal.animal_names = page.css("h4 strong").map {|names| names.text}
-        # binding.pry
-          animal_info = page.("div.et_pb_column.et_pb_column_1_3.et_pb_column_3").each do |info|
+        binding.pry
+        #   animal.animal_names = page.css("h4 strong").map {|names| names.text}
+          animal_info = page.css("div.et_pb_module.et-waypoint").map do |info|
           binding.pry
           animals << {
             :animal_names => animal_info.css("h4 strong").text,
             :animal_bios => animal_info.css("p").text
           }
-          binding.pry
         end
         animals
     end

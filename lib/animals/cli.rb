@@ -34,23 +34,17 @@ class Animals::CLI
       puts " "
 
       puts "Here are all the members of the #{animal.name} community at Leilani Farm Sanctuary:"
-      # Animals::Scraper.scrape_animal_details(animal)
       puts " "
-      puts "Some animal names"
+      Animals::Scraper.scrape_animal_details(animal)
+      # puts "Some animal names"
       puts " "
       puts "Type 'main menu' to go back or 'exit'."
 
       if input.downcase == "main_menu"
         list_animals
-      elsif
-        "Not sure what you meant. Please type 'main menu' or 'exit'."
       else
-        goodbye 
+        "Not sure what you meant. Please type 'main menu' or 'exit'."
       end
     end
-  end
-
-  def goodbye
-    puts "Goodbye!"
   end
 end
