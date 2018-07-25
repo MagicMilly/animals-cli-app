@@ -36,7 +36,8 @@ class Animals::CLI
       puts "Here are all the members of the #{animal.name} community at Leilani Farm Sanctuary:"
       puts " "
       Animals::Scraper.scrape_community_details(animal)
-      Animals::Community.all.each {|member| puts member.name}    
+      # Animals::Community.all.each {|member| puts member.name}
+      display_community_members(animal)
       puts " "
       # puts "Type 'main menu' to go back or 'exit'."
 
@@ -48,11 +49,9 @@ class Animals::CLI
     # end
   end
 
-  # def add_atributes
-  #
-  # end
-
-  #display_with_attributes
-  #
-  #end
+  def display_community_members(animal)
+    Animals::Species.all.each do |member|
+      puts "#{member.member_name} - #{member.member_bio}"
+    end
+  end
 end
