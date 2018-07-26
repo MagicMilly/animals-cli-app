@@ -40,7 +40,9 @@ class Animals::CLI
       # display_community_members(animal)
       puts " "
       # puts "Type 'main menu' to go back or 'exit'."
-
+      Animals::Community.all.each do |member|
+        puts member.name
+      end 
       # if input.downcase == "main_menu"
       #   list_animals
       # else
@@ -52,6 +54,7 @@ class Animals::CLI
   def display_community_members(animal)
     Animals::Species.all.each do |animal|
       puts "#{animal.member_name}"
+      binding.pry
     end
   end
 end

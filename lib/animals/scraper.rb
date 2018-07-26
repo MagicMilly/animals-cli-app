@@ -49,8 +49,9 @@ class Animals::Scraper
     # end
 
       page.css("div.et_pb_module h4").children.each do |info|
-        animal.member_name = info.text
-        binding.pry
+        name = info.text
+        Animals::Community.new(name)
+        # binding.pry
       end
 
       # page.css("div.et_pb_text.et_pb_module p").children.each do |info|
