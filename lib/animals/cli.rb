@@ -37,7 +37,7 @@ class Animals::CLI
       puts " "
       Animals::Scraper.scrape_community_details(animal)
       # Animals::Community.all.each {|member| puts member.name}
-      display_community_members(animal)
+      # display_community_members(animal)
       puts " "
       # puts "Type 'main menu' to go back or 'exit'."
 
@@ -50,8 +50,8 @@ class Animals::CLI
   end
 
   def display_community_members(animal)
-    Animals::Species.all.each do |member|
-      puts "#{member.member_name} - #{member.member_bio}"
+    Animals::Species.all.each do |animal|
+      puts "#{animal.member_name}"
     end
   end
 end

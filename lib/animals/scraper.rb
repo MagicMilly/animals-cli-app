@@ -39,14 +39,22 @@ class Animals::Scraper
       url = animal.url
       page = Nokogiri::HTML(open(url))
 
+    #   page.css("div").each do |info|
+    #     binding.pry
+    #     animal.member_name = info.css("div.et_pb_module h4").children.text
+    #
+    #     animal.member_bio = info.css("div.et_pb_text.et_pb_module p").children.text
+    #   end
+    # end
+
       page.css("div.et_pb_module h4").children.each do |info|
         animal.member_name = info.text
-        binding.pry 
+        binding.pry
       end
 
-      page.css("div.et_pb_text.et_pb_module p").children.each do |info|
-        animal.member_bio = info.text
-      end
+      # page.css("div.et_pb_text.et_pb_module p").children.each do |info|
+      #   animal.member_bio = info.text
+      # end
     end
 
 
