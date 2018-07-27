@@ -1,8 +1,6 @@
 # Animals
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/animals`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem will introduce the user to the animals currently living on the Leilani Farm Sanctuary in Hawaii. The user will be able to interact with this gem to see the different animal species living at the sanctuary and the names of the different animals of a selected species.   
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Open the cli-animals-app once you have installed this gem. To start the application, run './bin/animals' in your terminal. Follow prompts to interact with the application. 
 
 ## Development
 
