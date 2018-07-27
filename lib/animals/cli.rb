@@ -30,6 +30,7 @@ class Animals::CLI
       input = gets.strip.downcase
       index = input.to_i - 1
 
+        # check for valid input
         if (0..14).include?(index)
            animal = Animals::Species.all[index]
            puts "You chose #{animal.name}!"
@@ -50,6 +51,7 @@ class Animals::CLI
     end
   end
 
+  # method used in main menu to list names of selected species 
   def display_community_members
     Animals::Community.all.each do |member|
       puts "- " + member.name

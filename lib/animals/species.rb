@@ -1,3 +1,4 @@
+# Class responsible for the different animal species living on the farm 
 class Animals::Species
 
   attr_accessor :name, :url

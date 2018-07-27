@@ -1,8 +1,8 @@
-#Class for the community of animal species selected by user
-
+#Class responsible for the community of specific species selected by user
 class Animals::Community
 
-  attr_accessor :name, :bio
+  # :bio could be added as a future feature
+  attr_accessor :name
   @@all = []
 
   def initialize(name)
