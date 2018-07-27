@@ -1,6 +1,6 @@
 class Animals::Species
 
-  attr_accessor :name, :url, :member_name, :member_bio
+  attr_accessor :name, :url
 
   @@all = []
 

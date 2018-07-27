@@ -36,13 +36,9 @@ class Animals::CLI
       puts "Here are all the members of the #{animal.name} community at Leilani Farm Sanctuary:"
       puts " "
       Animals::Scraper.scrape_community_details(animal)
-      # Animals::Community.all.each {|member| puts member.name}
-      # display_community_members(animal)
-      puts " "
       # puts "Type 'main menu' to go back or 'exit'."
-      Animals::Community.all.each do |member|
-        puts member.name
-      end 
+      display_community_members
+      puts " "
       # if input.downcase == "main_menu"
       #   list_animals
       # else
@@ -51,10 +47,9 @@ class Animals::CLI
     # end
   end
 
-  def display_community_members(animal)
-    Animals::Species.all.each do |animal|
-      puts "#{animal.member_name}"
-      binding.pry
+  def display_community_members
+    Animals::Community.all.each do |member|
+      puts "- " + member.name
     end
   end
 end
