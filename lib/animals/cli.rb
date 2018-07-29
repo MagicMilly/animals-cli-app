@@ -45,10 +45,8 @@ class Animals::CLI
         elsif input == "main menu"
           list_animals
 
-        elsif input == "exit"
+        else input == "exit"
           break
-        else
-          "Not sure what you meant. Please type a valid command."
         end
     end
   end
