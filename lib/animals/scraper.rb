@@ -21,7 +21,6 @@ class Animals::Scraper
       page.css("div.et_pb_module h4").children.each do |info|
         member_name = info.text
         Animals::Community.new(species, member_name)
-        # binding.pry
       end
 
       # possible future feature to scrape animal bios

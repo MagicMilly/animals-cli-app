@@ -45,11 +45,15 @@ class Animals::CLI
         elsif input == "main menu"
           list_animals
 
-        else input == "exit"
+        elsif input == "exit"
           break
+        else
+          "Not sure what you meant. Please type a valid command."
         end
     end
   end
+
+  # possible future feature: check for invalid input of words or numbers, and prompt user to 'try again'
 
   def goodbye
     puts "Thanks for checking out the animals at Leilani Farm Sanctuary!"
