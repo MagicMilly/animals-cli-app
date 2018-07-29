@@ -20,7 +20,7 @@ class Animals::CLI
       puts "#{index}. #{species.name}"
     end
     puts " "
-    puts "Please select an animal's number to learn more, or type 'main menu' or 'exit'."
+    puts "Please select an animal's number to learn more, or type 'exit'."
   end
 
   def main_menu
@@ -38,7 +38,6 @@ class Animals::CLI
            puts "Here are all the members of the #{species.name} community at Leilani Farm Sanctuary:"
            puts " "
            Animals::Scraper.scrape_community_details(species)
-           #  display_community_members
            Animals::Community.list_member_names(species)
            puts " "
            puts "Please type 'main menu' to return to list, or 'exit'."
@@ -51,13 +50,6 @@ class Animals::CLI
         end
     end
   end
-
-  # method used in main menu to list names of selected species
-  # def display_community_members
-  #   Animals::Community.all.each do |member|
-  #     puts "- " + member.name
-  #   end
-  # end
 
   def goodbye
     puts "Thanks for checking out the animals at Leilani Farm Sanctuary!"
