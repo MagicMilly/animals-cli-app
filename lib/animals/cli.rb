@@ -32,13 +32,14 @@ class Animals::CLI
 
         # check for valid input
         if (0..14).include?(index)
-           animal = Animals::Species.all[index]
-           puts "You chose #{animal.name}!"
+           species = Animals::Species.all[index]
+           puts "You chose #{species.name}!"
            puts " "
-           puts "Here are all the members of the #{animal.name} community at Leilani Farm Sanctuary:"
+           puts "Here are all the members of the #{species.name} community at Leilani Farm Sanctuary:"
            puts " "
-           Animals::Scraper.scrape_community_details(animal)
-           display_community_members
+           Animals::Scraper.scrape_community_details(species)
+           #  display_community_members
+           Animals::Community.list_member_names(species)
            puts " "
            puts "Please type 'main menu' to return to list, or 'exit'."
 
@@ -51,12 +52,12 @@ class Animals::CLI
     end
   end
 
-  # method used in main menu to list names of selected species 
-  def display_community_members
-    Animals::Community.all.each do |member|
-      puts "- " + member.name
-    end
-  end
+  # method used in main menu to list names of selected species
+  # def display_community_members
+  #   Animals::Community.all.each do |member|
+  #     puts "- " + member.name
+  #   end
+  # end
 
   def goodbye
     puts "Thanks for checking out the animals at Leilani Farm Sanctuary!"

@@ -15,15 +15,16 @@ class Animals::Scraper
     end
 
     # Second level of scraping: the name of the animals of each species living on the farm
-    def self.scrape_community_details(animal)
-      url = animal.url
+    def self.scrape_community_details(species)
+      url = species.url
       page = Nokogiri::HTML(open(url))
       page.css("div.et_pb_module h4").children.each do |info|
-        name = info.text
-        Animals::Community.new(name)
+        member_name = info.text
+        Animals::Community.new(species, member_name)
+        # binding.pry
       end
 
-      # possible future feature to scrape animal bios 
+      # possible future feature to scrape animal bios
       # page.css("div.et_pb_text.et_pb_module p").children.each do |info|
       #   animal.member_bio = info.text
       # end
