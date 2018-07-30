@@ -15,8 +15,8 @@ class Animals::CLI
   def list_animals
     puts "Here are the animals living at Leilani Farm Sanctuary:"
     puts " "
-    animals = Animals::Species.all
-    animals.each.with_index(1) do |species, index|
+    @animals = Animals::Species.all
+    @animals.each.with_index(1) do |species, index|
       puts "#{index}. #{species.name}"
     end
     puts " "
@@ -31,7 +31,8 @@ class Animals::CLI
       index = input.to_i - 1
 
         # check for valid input
-        if (0..14).include?(index)
+        if (index > 0) && (index <= @animals.length)
+        # if (0..14).include?(index)
            species = Animals::Species.all[index]
            puts "You chose #{species.name}!"
            puts " "

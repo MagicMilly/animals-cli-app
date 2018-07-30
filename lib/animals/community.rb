@@ -19,7 +19,6 @@ class Animals::Community
     self.all.each do |a|
       puts "- " + a.member_name if a.species == species
     end
-
   end
 
 end
