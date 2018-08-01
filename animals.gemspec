@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Emily J Cain'"]
   spec.email         = ["'emilycain@ymail.com'"]
 
-  spec.summary       = "short description"
-  spec.description   = "description"
+  spec.summary       = "App that rakes information from Leilani Farm Sanctuary Website"
+  spec.description   = "Users can select one of the species living at the sanctuary, which returns all the names of the      animals of the selected species."
   spec.homepage      = "https://github.com/MagicMilly/animals-cli-app"
   spec.license       = "MIT"
 
