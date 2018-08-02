@@ -14,5 +14,4 @@ class Animals::Species
   def self.all
     @@all
   end
-
 end
