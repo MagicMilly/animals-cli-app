@@ -20,5 +20,4 @@ class Animals::Community
       puts "- " + a.member_name if a.species == species
     end
   end
-
 end
