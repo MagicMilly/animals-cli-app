@@ -1,3 +1,5 @@
+#### This command line app was built as a project for Flatiron School's Fullstack Web Dev program and is no longer being maintained. 
+
 # Animals
 
 This gem will introduce the user to the animals currently living on the Leilani Farm Sanctuary in Hawaii. The user will be able to interact with this gem to see the different animal species living at the sanctuary and the names of the different animals of a selected species.   
