@@ -1,5 +1,7 @@
 #### This command line app was built as a project for Flatiron School's Fullstack Web Dev program and is no longer being maintained. 
 
+##### (but if you visit the [Leilani Farm Sanctuary](http://leilanifarmsanctuary.org/), please let me know)
+
 # Animals
 
 This gem will introduce the user to the animals currently living on the Leilani Farm Sanctuary in Hawaii. The user will be able to interact with this gem to see the different animal species living at the sanctuary and the names of the different animals of a selected species.   
@@ -14,7 +16,7 @@ Open the cli-animals-app once you have installed this gem. To start the applicat
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/'MagicMilly'/animals. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
